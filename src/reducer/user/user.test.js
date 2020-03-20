@@ -1,4 +1,8 @@
-import {reducer, ActionCreator, ActionType, AuthorizationStatus} from "./user.js";
+import {reducer, ActionCreator, ActionType, AuthorizationStatus, Operation} from "./user.js";
+import MockAdapter from "axios-mock-adapter";
+import {createAPI} from "../../api.js";
+
+const api = createAPI(()=>{});
 
 
 it(`Reducer without additional parameters should return initial state`, () => {
